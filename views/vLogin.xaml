@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="portegaExamenP1.views.vLogin"
+             Title="vLogin">
+    <VerticalStackLayout
+        Padding="25">
+        <Label 
+            Text="Platzi Cursos Online"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" FontSize="20" TextColor="red"/>
+        <Image Source="imagen.png" 
+               HeightRequest="100"
+               />
+        <Image Source="logo.png" 
+       HeightRequest="100"
+       />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Usuario: "
+                   FontSize="20"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Grid.Column="0"
+                   Grid.Row="0"
+                   />
+            <Label Text="Password: "
+       FontSize="20"
+       VerticalOptions="Center"
+       HorizontalOptions="Center"
+       Grid.Column="0"
+       Grid.Row="1"
+       />
+
+            <Entry x:Name="txtUsuario"
+       Placeholder="Usuario"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+
+            <Entry x:Name="txtPassword"
+        Placeholder="Ingrese Contraseña"
+        IsPassword="True"
+                   Grid.Column="1"
+                   Grid.Row="1"/>
+
+            <Button x:Name="btnInicio" Padding="0" 
+        Margin="0,45,0,0" Text="Iniciar Sesión" Clicked="btnInicio_Clicked" Grid.Row="2" Grid.Column="0"/>
+            <Button x:Name="btnAcercaDe" Padding="0"
+        Margin="0,45,0,0" Text="Acerca de .." Clicked="btnAcercaDe_Clicked" Grid.Row="2" Grid.Column="1"/>
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>
